@@ -72,6 +72,47 @@ a {
   gap: 24px;
 }
 
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+
+.brand-identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 17px;
+  border-left: 1px solid var(--border);
+}
+
+.brand-name {
+  color: var(--heading);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+
+.brand-description {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.05px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.brand-description i {
+  color: var(--accent);
+  font-style: normal;
+  padding: 0 3px;
+}
+
 .logo {
   display: inline-flex;
   flex-direction: column;
@@ -378,6 +419,23 @@ a {
     min-height: 72px;
   }
 
+  .brand-lockup {
+    gap: 12px;
+  }
+
+  .brand-identity {
+    padding-left: 12px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .brand-description {
+    font-size: 8px;
+    letter-spacing: 0.65px;
+  }
+
   .nav-links {
     gap: 17px;
     font-size: 12px;
@@ -446,6 +504,25 @@ a {
     justify-content: center;
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+  }
+
+  .brand-identity {
+    padding-left: 10px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .brand-description {
+    font-size: 7px;
+    letter-spacing: 0.35px;
+    white-space: normal;
+    max-width: 245px;
   }
 
   .nav-links {
