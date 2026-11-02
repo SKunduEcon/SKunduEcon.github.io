@@ -4,32 +4,22 @@
    Editorial design | ET-inspired red & white
    ========================================= */
 
-/* 1. COLOUR PALETTE & DESIGN VARIABLES */
+/* ---------- COLOUR PALETTE ---------- */
 
 :root {
-  --background: #FFFFFF;
-  --surface: #F7F7F7;
-  --surface-alt: #F1F1F1;
-
+  --background: #ffffff;
+  --surface: #f8f8f8;
   --text: #292929;
   --heading: #171717;
-  --muted: #707070;
-
-  --accent: #E21E26;
-  --accent-dark: #BC171E;
-  --accent-light: #FCEBEC;
-
-  --border: #E5E5E5;
-
-  --font-heading: Georgia, "Times New Roman", serif;
-  --font-body: Arial, Helvetica, sans-serif;
+  --muted: #666666;
+  --accent: #c8102e;
+  --border: #e5e5e5;
 
   --content-width: 1120px;
-  --section-space: 88px;
+  --page-gutter: 48px;
 }
 
-
-/* 2. GLOBAL RESET */
+/* ---------- RESET ---------- */
 
 * {
   margin: 0;
@@ -44,81 +34,70 @@ html {
 body {
   background: var(--background);
   color: var(--text);
-  font-family: var(--font-body);
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.25s ease;
 }
 
-a:hover {
-  color: var(--accent);
-}
+/* ---------- CONSISTENT PAGE MARGINS ---------- */
 
-img {
-  max-width: 100%;
-  display: block;
-}
+/* Keeps content aligned with a clear left and right margin */
 
 .container {
-  width: min(90%, var(--content-width));
-  margin: 0 auto;
+  width: calc(100% - (var(--page-gutter) * 2));
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* ---------- HEADER & NAVIGATION ---------- */
 
-/* 3. HEADER & NAVIGATION */
-
-header,
 .site-header {
-  background: #FFFFFF;
+  background: #ffffff;
+  border-top: 5px solid var(--accent);
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .navbar {
-  max-width: var(--content-width);
-  width: 90%;
-  margin: auto;
-  min-height: 78px;
+  min-height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
 
-.logo,
-.site-title {
-  color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: -0.5px;
+.logo {
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
 }
 
-.logo span,
-.site-title span {
+.logo span {
   color: var(--accent);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 34px;
   list-style: none;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .nav-links a {
-  color: #444444;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  color: #333333;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
@@ -126,25 +105,19 @@ header,
   color: var(--accent);
 }
 
-
-/* 4. HERO SECTION */
+/* ---------- HERO SECTION ---------- */
 
 .hero {
-  padding: 120px 0 110px;
-  background: var(--surface);
+  background: #ffffff;
+  padding: 105px 0 100px;
   border-bottom: 1px solid var(--border);
-}
-
-.hero-content {
-  max-width: var(--content-width);
-  width: 90%;
-  margin: auto;
 }
 
 .eyebrow,
 .section-label {
   color: var(--accent);
-  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -152,240 +125,196 @@ header,
 }
 
 .hero h1 {
-  max-width: 850px;
   color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: clamp(42px, 6vw, 72px);
-  font-weight: 500;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 400;
   line-height: 1.12;
-  letter-spacing: -1.5px;
-  margin-bottom: 28px;
+  letter-spacing: -2px;
+  max-width: 850px;
+  margin-bottom: 27px;
 }
 
 .hero h1 em {
   color: var(--accent);
-  font-weight: 400;
+  font-style: normal;
 }
 
-.hero p {
+.hero-intro {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.8;
   max-width: 680px;
-  color: #555555;
-  font-size: 17px;
-  line-height: 1.9;
+  margin-bottom: 30px;
 }
 
-
-/* 5. BUTTONS & LINKS */
-
-.button,
-.btn {
+.text-link {
   display: inline-block;
-  margin-top: 30px;
-  padding: 13px 24px;
-  background: var(--accent);
-  color: #FFFFFF;
-  border: 1px solid var(--accent);
-  font-size: 12px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 5px;
+  transition: opacity 0.2s ease;
 }
 
-.button:hover,
-.btn:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  color: #FFFFFF;
-  transform: translateY(-2px);
+.text-link:hover {
+  opacity: 0.7;
 }
 
-
-/* 6. CONTENT SECTIONS */
-
-section {
-  padding: var(--section-space) 0;
-}
+/* ---------- SECTION HEADINGS ---------- */
 
 .section-heading {
   color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: 38px;
-  font-weight: 500;
+  font-size: 34px;
+  font-weight: 400;
   line-height: 1.25;
-  margin-bottom: 18px;
+  letter-spacing: -0.7px;
+  margin-bottom: 15px;
 }
 
 .section-intro {
-  max-width: 720px;
   color: var(--muted);
-  margin-bottom: 38px;
+  font-size: 16px;
+  max-width: 680px;
+  margin-bottom: 35px;
 }
 
+/* ---------- RESEARCH / NOTEBOOK SECTION ---------- */
 
-/* 7. RESEARCH & ARTICLE CARDS */
+.writing-section {
+  padding: 85px 0;
+  background: #ffffff;
+}
 
-.article-grid,
+.notebook-panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  padding: 32px 36px;
+  margin-top: 28px;
+}
+
+.notebook-panel h3 {
+  color: var(--heading);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.notebook-panel p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ---------- AREAS OF INTEREST ---------- */
+
+.areas-section {
+  background: var(--surface);
+  padding: 85px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
 .topic-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 35px;
+  gap: 22px;
+  margin-top: 38px;
 }
 
-.article-card,
 .topic-card {
-  padding: 30px;
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  transition: all 0.25s ease;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-top: 3px solid var(--accent);
+  padding: 30px 32px;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
 }
 
-.article-card:hover,
 .topic-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
-  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
 }
 
-.article-card .category {
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.article-card h3,
 .topic-card h3 {
   color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 1.35;
+  font-size: 21px;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 
-.article-card p,
 .topic-card p {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-}
-
-
-/* 8. ABOUT SECTION */
+/* ---------- ABOUT SECTION ---------- */
 
 .about-section {
-  background: var(--surface);
-}
-
-.about-content {
-  max-width: 780px;
-}
-
-.about-content p {
-  color: #555555;
-  margin-bottom: 18px;
-}
-
-
-/* 9. PAGE CONTENT */
-
-.page-content {
-  max-width: 850px;
-  margin: 0 auto;
+  background: #ffffff;
   padding: 85px 0;
 }
 
-.page-content h1 {
-  color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: clamp(38px, 5vw, 58px);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 30px;
+.about-content {
+  max-width: 800px;
 }
 
-.page-content h2 {
-  color: var(--heading);
-  font-family: var(--font-heading);
-  font-size: 30px;
-  font-weight: 500;
-  margin: 42px 0 15px;
-}
-
-.page-content p {
+.about-content p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
   margin-bottom: 20px;
 }
 
+.about-content h2,
+.about-content h3 {
+  color: var(--heading);
+  font-weight: 400;
+  margin: 32px 0 14px;
+}
 
-/* 10. FOOTER */
+.about-content h2 {
+  font-size: 30px;
+}
 
-footer,
+.about-content h3 {
+  font-size: 22px;
+}
+
+/* ---------- FOOTER ---------- */
+
 .site-footer {
-  padding: 35px 0;
-  background: #FFFFFF;
-  border-top: 1px solid var(--border);
+  background: #ffffff;
+  border-top: 2px solid var(--accent);
+  padding: 28px 0;
+}
+
+.site-footer p {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   text-align: center;
 }
 
-footer p,
-.site-footer p {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.3px;
-}
-
-footer a,
-.site-footer a {
-  color: var(--accent);
-}
-
-
-/* 11. HORIZONTAL ACCENT */
-
-.accent-line {
-  width: 48px;
-  height: 3px;
-  background: var(--accent);
-  margin: 22px 0;
-}
-
-
-/* 12. RESPONSIVE DESIGN */
+/* ---------- RESPONSIVE DESIGN ---------- */
 
 @media (max-width: 768px) {
+
   :root {
-    --section-space: 60px;
+    --page-gutter: 25px;
   }
 
   .navbar {
-    flex-direction: column;
-    justify-content: center;
-    padding: 18px 0;
-    gap: 14px;
+    min-height: 72px;
   }
 
   .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
+    gap: 17px;
+    font-size: 12px;
   }
 
   .hero {
@@ -394,39 +323,55 @@ footer a,
 
   .hero h1 {
     font-size: 44px;
+    letter-spacing: -1.3px;
   }
 
-  .hero p {
-    font-size: 15px;
+  .hero-intro {
+    font-size: 17px;
   }
 
-  .article-grid,
+  .writing-section,
+  .areas-section,
+  .about-section {
+    padding: 65px 0;
+  }
+
+  .section-heading {
+    font-size: 29px;
+  }
+
   .topic-grid {
     grid-template-columns: 1fr;
   }
 
-  .section-heading {
-    font-size: 32px;
-  }
-
-  .page-content {
-    width: 90%;
-    padding: 60px 0;
+  .notebook-panel {
+    padding: 25px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
+
+  :root {
+    --page-gutter: 20px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
   .hero h1 {
-    font-size: 37px;
+    font-size: 38px;
   }
 
-  .logo,
-  .site-title {
-    font-size: 22px;
-  }
-
-  .article-card,
-  .topic-card {
-    padding: 22px;
+  .hero {
+    padding: 60px 0;
   }
 }
