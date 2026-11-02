@@ -1,0 +1,432 @@
+
+/* =========================================
+   SHINY KUNDU | ECONOMICS & MACRO STRATEGY
+   Editorial design | ET-inspired red & white
+   ========================================= */
+
+/* 1. COLOUR PALETTE & DESIGN VARIABLES */
+
+:root {
+  --background: #FFFFFF;
+  --surface: #F7F7F7;
+  --surface-alt: #F1F1F1;
+
+  --text: #292929;
+  --heading: #171717;
+  --muted: #707070;
+
+  --accent: #E21E26;
+  --accent-dark: #BC171E;
+  --accent-light: #FCEBEC;
+
+  --border: #E5E5E5;
+
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --content-width: 1120px;
+  --section-space: 88px;
+}
+
+
+/* 2. GLOBAL RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(90%, var(--content-width));
+  margin: 0 auto;
+}
+
+
+/* 3. HEADER & NAVIGATION */
+
+header,
+.site-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: var(--content-width);
+  width: 90%;
+  margin: auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo,
+.site-title {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.logo span,
+.site-title span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #444444;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
+
+/* 4. HERO SECTION */
+
+.hero {
+  padding: 120px 0 110px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+  max-width: var(--content-width);
+  width: 90%;
+  margin: auto;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  max-width: 850px;
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.hero p {
+  max-width: 680px;
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+
+/* 5. BUTTONS & LINKS */
+
+.button,
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 13px 24px;
+  background: var(--accent);
+  color: #FFFFFF;
+  border: 1px solid var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.button:hover,
+.btn:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+
+/* 6. CONTENT SECTIONS */
+
+section {
+  padding: var(--section-space) 0;
+}
+
+.section-heading {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.section-intro {
+  max-width: 720px;
+  color: var(--muted);
+  margin-bottom: 38px;
+}
+
+
+/* 7. RESEARCH & ARTICLE CARDS */
+
+.article-grid,
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.article-card,
+.topic-card {
+  padding: 30px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+.article-card:hover,
+.topic-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+.article-card .category {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.article-card h3,
+.topic-card h3 {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.article-card p,
+.topic-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+
+/* 8. ABOUT SECTION */
+
+.about-section {
+  background: var(--surface);
+}
+
+.about-content {
+  max-width: 780px;
+}
+
+.about-content p {
+  color: #555555;
+  margin-bottom: 18px;
+}
+
+
+/* 9. PAGE CONTENT */
+
+.page-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 85px 0;
+}
+
+.page-content h1 {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.page-content h2 {
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 500;
+  margin: 42px 0 15px;
+}
+
+.page-content p {
+  margin-bottom: 20px;
+}
+
+
+/* 10. FOOTER */
+
+footer,
+.site-footer {
+  padding: 35px 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer p,
+.site-footer p {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+footer a,
+.site-footer a {
+  color: var(--accent);
+}
+
+
+/* 11. HORIZONTAL ACCENT */
+
+.accent-line {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  margin: 22px 0;
+}
+
+
+/* 12. RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  :root {
+    --section-space: 60px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 0;
+    gap: 14px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 75px 0 70px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .article-grid,
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 32px;
+  }
+
+  .page-content {
+    width: 90%;
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .logo,
+  .site-title {
+    font-size: 22px;
+  }
+
+  .article-card,
+  .topic-card {
+    padding: 22px;
+  }
+}
