@@ -109,8 +109,30 @@ a {
 
 .hero {
   background: #ffffff;
-  padding: 105px 0 100px;
+  padding: 78px 0 82px;
   border-bottom: 1px solid var(--border);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-visual {
+  min-width: 0;
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .eyebrow,
@@ -318,7 +340,17 @@ a {
   }
 
   .hero {
-    padding: 75px 0 70px;
+    padding: 65px 0 60px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-visual {
+    max-width: 620px;
+    margin: 0 auto;
   }
 
   .hero h1 {
