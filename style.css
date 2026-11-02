@@ -89,11 +89,23 @@ a {
 }
 
 .brand-name {
-  color: var(--heading);
+  color: var(--accent);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.brand-byline {
+  color: var(--heading);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.45px;
   line-height: 1.1;
-  letter-spacing: -0.3px;
+  text-transform: uppercase;
 }
 
 .brand-description {
@@ -428,7 +440,11 @@ a {
   }
 
   .brand-name {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .brand-byline {
+    font-size: 8px;
   }
 
   .brand-description {
@@ -515,7 +531,11 @@ a {
   }
 
   .brand-name {
-    font-size: 17px;
+    font-size: 19px;
+  }
+
+  .brand-byline {
+    font-size: 8px;
   }
 
   .brand-description {
