@@ -578,3 +578,28 @@ a {
 }
 
 .article-page{padding:65px 0 90px}.research-article{max-width:860px}.research-article h1{font-size:clamp(42px,6vw,62px);font-weight:400;line-height:1.08;margin-bottom:15px}.research-article h1 em{color:var(--accent);font-style:normal}.article-meta{color:var(--muted);font:12px Arial,sans-serif;margin-bottom:32px}.article-bottom-line{padding:24px 27px;background:var(--surface);border-left:4px solid var(--accent);font-size:17px;line-height:1.8;margin-bottom:34px}.research-chart{margin:32px 0 42px}.research-chart img{display:block;width:100%;height:auto}.research-chart figcaption{color:var(--muted);font:11px/1.6 Arial,sans-serif;margin-top:10px}.research-article h2{font-size:29px;font-weight:400;line-height:1.25;margin:42px 0 15px}.research-article h3{font-size:20px;font-weight:400;margin:24px 0 10px}.research-article p,.research-article li{font-size:15px;line-height:1.85}.research-article p{margin-bottom:17px}.research-article ul,.research-article ol{padding-left:24px;margin:14px 0 20px}.research-article li{padding-left:5px;margin-bottom:12px}.research-article a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}.table-wrap{overflow-x:auto;margin:20px 0 28px}.research-table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.65}.research-table th{background:var(--surface);font:700 11px Arial,sans-serif;text-align:left;text-transform:uppercase}.research-table th,.research-table td{padding:13px 12px;border-bottom:1px solid var(--border);vertical-align:top}.research-table td:last-child{min-width:360px}.article-disclaimer{margin:42px 0 24px!important;padding-top:18px;border-top:1px solid var(--border);color:var(--muted)!important;font-style:italic}.research-entry{margin-top:28px;padding:30px 34px;border:1px solid var(--border);border-left:4px solid var(--accent);background:#fff}.research-category{color:var(--accent);font:700 10px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}.research-entry h3{font-size:25px;font-weight:400;margin-bottom:9px}.research-entry h3 a:hover{color:var(--accent)}.research-entry p:not(.research-category){color:var(--muted);max-width:760px;margin-bottom:15px}.topic-link{display:inline-block;margin-top:14px;color:var(--accent);font:700 12px Arial,sans-serif;border-bottom:1px solid var(--accent);padding-bottom:3px}@media(max-width:768px){.article-page{padding:45px 0 65px}.research-entry{padding:24px}.research-article h2{font-size:25px}.research-table td:last-child{min-width:300px}}
+
+
+/* ---------- SK ECON EDITORIAL LOGO ---------- */
+.logo {
+  display: block;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.logo-image {
+  display: block;
+  width: 188px;
+  height: auto;
+  background: #fbf7ed;
+}
+
+@media (max-width: 640px) {
+  .brand-lockup { gap: 11px; }
+  .brand-identity { padding-left: 11px; }
+  .logo-image { width: 132px; }
+  .brand-name { font-size: 18px; }
+  .brand-description { font-size: 7px; letter-spacing: .65px; white-space: normal; }
+}
