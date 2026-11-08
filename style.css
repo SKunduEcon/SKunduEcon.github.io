@@ -697,3 +697,33 @@ a {
     padding: 24px 0 0;
   }
 }
+
+
+/* ---------- HOMEPAGE ABOUT PORTRAIT ---------- */
+.home-about-layout {
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.72fr);
+  gap: 76px;
+}
+.home-about-portrait {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 310px);
+  overflow: hidden;
+  border-radius: 3px;
+  background: #f2f1ed;
+}
+.home-about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 42%;
+}
+@media (max-width: 768px) {
+  .home-about-layout { grid-template-columns: 1fr; gap: 28px; }
+  .home-about-portrait {
+    justify-self: start;
+    width: min(72%, 280px);
+  }
+}
