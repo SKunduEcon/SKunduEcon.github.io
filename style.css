@@ -616,3 +616,84 @@ a {
   .brand-name { font-size: 18px; }
   .brand-description { font-size: 7px; letter-spacing: .65px; white-space: normal; }
 }
+
+
+/* ---------- HOMEPAGE ABOUT INTRO ---------- */
+.home-about-section {
+  background: #ffffff;
+  padding: 66px 0 70px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.85fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.home-about-copy .section-label {
+  margin-bottom: 15px;
+}
+
+.home-about-copy .section-heading {
+  max-width: 650px;
+  margin-bottom: 18px;
+}
+
+.home-about-copy > p:not(.section-label) {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 690px;
+  margin-bottom: 22px;
+}
+
+.home-about-aside {
+  border-left: 1px solid var(--border);
+  padding: 8px 0 8px 30px;
+}
+
+.home-about-aside-label {
+  color: var(--accent);
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.home-about-aside ul {
+  list-style: none;
+}
+
+.home-about-aside li {
+  color: var(--heading);
+  font-size: 17px;
+  line-height: 1.4;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-about-aside li:last-child {
+  border-bottom: 0;
+}
+
+.home-about-aside li span {
+  display: block;
+  color: var(--muted);
+  font: 11px/1.5 Arial, sans-serif;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .home-about-section { padding: 58px 0; }
+  .home-about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .home-about-aside {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding: 24px 0 0;
+  }
+}
